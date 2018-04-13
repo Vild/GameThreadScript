@@ -1,0 +1,42 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+	"d.neverUseDub": true,
+	"d.stdlibPath": [
+		"src/system/kernel",
+		"src/system/loader",
+		"src/system/loader-api",
+		"src/system/stl"
+	],
+	"d.projectImportPaths": [
+		"src/system/kernel",
+		"src/system/loader",
+		"src/system/loader-api",
+		"src/system/stl"
+	],
+	"d.enableDMDImportTiming": false,
+	"editor.rulers": [
+		120, // soft max line length
+		160 // hard max line length
+	],
+	"editor.suggestLineHeight": 20,
+	"dfmt.braceStyle": "otbs",
+	"dfmt.alignSwitchStatements": true,
+	"dfmt.outdentAttributes": true,
+	"dfmt.splitOperatorAtLineEnd": false,
+	"dfmt.spaceAfterCast": false,
+	"dfmt.selectiveImportSpace": true,
+	"dfmt.compactLabeledStatements": true,
+	"files.exclude": {
+		"build": true,
+		".*": true,
+		"*.json": true,
+		"*.log": true,
+		"*.ninja": true,
+		"*.dot": true,
+		"*~": true
+	},
+	"files.associations": {
+		"*.gts": "d",
+		"*.d.re": "d"
+	}
+}

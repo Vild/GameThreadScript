@@ -1,0 +1,7 @@
+name "gamethreadscript"
+description "A scripting language for a 3D engine. Both for handling objectives and objects."
+authors "Dan Printzell"
+copyright "Copyright © 2018, Dan Printzell"
+license "MPLv2"
+
+preBuildCommands "re2c -8 -W -Werror --input custom -o source/lexer.d source/lexer.d.re"
