@@ -18,5 +18,7 @@ int main(string[] args) {
 		writeln();
 	}
 
+	writeln();
+	counter.writeln;
 	return 0;
 }

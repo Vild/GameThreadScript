@@ -52,6 +52,7 @@ struct ErrorToken {
 	char errorChar;
 }
 
+static int[dchar] counter;
 alias Token = Algebraic!(ErrorToken, EndOfFile, dchar, Keyword, Attribute, Type, Symbol, Symbol, String, Integer, FloatingNumber);
 static Token getToken(ref string YYCURSOR) {
 	string r = YYCURSOR;
@@ -117,7 +118,14 @@ static Token getToken(ref string YYCURSOR) {
 		[0-9]* "." [0-9]+
 		| [0-9]+ "."       { return Token(FloatingNumber(r[0 .. r.length - YYCURSOR.length].to!double)); }
 
-		* { return Token(cast(dchar)r[0]); }
+		* {
+			dchar ch = cast(dchar)r[0];
+			if (auto _ = ch in counter)
+				(*_)++;
+			else
+				counter[ch] = 1;
+			return Token(ch);
+		}
 	*/
 
 }
